@@ -4,31 +4,60 @@ const generatePage = require("./src/page-template");
 
 // TODO: Create an array of questions for user input
 const promptProject = portfolioData => {
-    return inquirer.prompt ([
-    {
-        type: "input",
-        name: "name",
-        message: "What is the name of your project? (Required)",
-        validate: projectNameInput => {
-            if (projectNameInput) {
-                return true;
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the name of your project? (Required)",
+            validate: projectNameInput => {
+                if (projectNameInput) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter the name of your project!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "Provide a short description of your project (Required)",
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter a description!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "What are the steps required to install your project? (Required)",
+            validate: installationInput => {
+                if (installationInput) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter steps required to install your project!");
+                    return false;
+                }
+            }
+        }
+
+    ])
+        .then(projectData => {
+            portfolioData.projects.push(projectData);
+            if (projectData.confirmAddProject) {
+                return promptProject(portfolioData);
             }
             else {
-                console.log("Please enter the name of your project!");
-                return false;
+                return portfolioData;
             }
-        }
-    }
-])
-    .then(projectData => {
-        portfolioData.projects.push(projectData);
-        if (projectData.confirmAddProject) {
-            return promptProject(portfolioData);
-        }
-        else {
-            return portfolioData;
-        }
-    });
+        });
 };
 
 // TODO: Create a function to write README file
