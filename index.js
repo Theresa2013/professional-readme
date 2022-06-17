@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
 
 const generateMarkdown = require("./utils/generateMarkdown");
 
@@ -42,7 +41,19 @@ const questions = [{
     message: "What license is being used?"
 },
 {
-    
+    type: "input",
+    name: "tests",
+    message: "What is needed to test this application?"
+},
+{
+    type: "input",
+    name: "username",
+    message: "What is your username?"
+},
+{
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
 }
 ];
 
