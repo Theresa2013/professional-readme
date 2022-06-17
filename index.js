@@ -28,7 +28,7 @@ const questions = [{
 {
     type: "input",
     name: "usage",
-    message: "Provide instructions and examples for use"
+    message: "Provide instructions and examples for use:"
 },
 {
     type: "input",
@@ -36,9 +36,10 @@ const questions = [{
     message: "Who contributed to this project?"
 },
 {
-    type: "input",
+    type: "list",
     name: "license",
-    message: "What license is being used?"
+    message: "What license is being used? Please choose:",
+    choices: ["MIT License", "Apache License 2.0", "GNU GPLv3"]
 },
 {
     type: "input",
