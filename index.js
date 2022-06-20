@@ -67,7 +67,7 @@ function writeToFile(fileName, data) {
             return console.log(err);
         }
         else {
-            console.log("success");
+            console.log("Your README file is ready for preview!");
         }
     }
     )
@@ -77,7 +77,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then(function (data) {
-            writeToFile("README.md", generateMarkdown(data));
+            writeToFile("SampleREADME.md", generateMarkdown(data));
             console.log(data);
         });
 }

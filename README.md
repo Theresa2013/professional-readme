@@ -1,32 +1,46 @@
+# Professional README
 
-# Dogs
-https://github.com/fds/Dogs
+## Purpose
+To have a user enter a prompted series of questions using Node.js to create a professional README file.
 
-## Description
-Dogs are cool
+## User Story
 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-* [Tests](#tests)
-* [Questions](#questions)
+```
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
 
-## Installation
-These are the steps required to install my project: Hit
+## Acceptance Criteria
 
-## Usage
-These are the instructions and examples in order to use this project: fds
+```
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for information about my application repository
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+WHEN I click on the links in the Table of Contents
+THEN I am taken to the corresponding section of the README
+```
 
-## Credits
-Contributors: fds
+## Built With:
+* Javascript
+* Node.js
+* Inquierer
 
-## License
-This project is licensed with ![MIT License](https://img.shields.io/badge/license-MIT-green).
+## GitHub Repository
+https://github.com/Theresa2013/professional-readme.git 
 
-## Tests
-Examples of how to run tests for application: fds
+## Screenshots
+![demo](./images/Screenshot1.png)
 
-## Questions
-If you have any questions, contact fds directly at: fds.
+## Contribution 
+Made by Theresa Butterfield
